@@ -12,17 +12,17 @@ def read_patient_sequences(filename):
                 sequences.append((patient_num, ''.join(e for e in sequence if e.isalnum())))
     return sequences
 
-# def read_players(filename):
-#     f = open(filename, 'r')
-#     if f.mode == 'r':
-#         contents = f.read()
-#
-#     return contents
-
 scores = read_patient_sequences('lol_tier.txt')
 # players = read_players('players.txt')
 
 #INPUT PLAYERS HERE
+#INPUT PLAYERS HERE
+#INPUT PLAYERS HERE
+#INPUT PLAYERS HERE
+#INPUT PLAYERS HERE
+#INPUT PLAYERS HERE
+#INPUT PLAYERS HERE
+
 players = ['Lionblaze219','Aimishi','Mapper','Shadow','Exocett','Shamusa','Asdgart','2GoodPhoU','Moon','KV']
 
 
@@ -57,7 +57,15 @@ def lol_teams(scores, players):
     for l in numbers:
         team_score += int(active_scores[l][1])
     team_score = float(team_score) / 5
-    #CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
+    # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
+    # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
+    # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
+    # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
+    # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
+    # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
+    # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
+    # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
+
     if average_score - 1 <= team_score <= average_score + 1:
         team1 = []
         for l in numbers:
