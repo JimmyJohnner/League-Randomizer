@@ -54,7 +54,6 @@ def lol_teams(scores, players):
 
 #generating random unique numbers for teams
     numbers = random.sample(range(0, 9), 5)
-    print numbers
     for l in numbers:
         team_score += int(active_scores[l][1])
     team_score = float(team_score) / 5
