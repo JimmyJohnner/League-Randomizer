@@ -58,7 +58,8 @@ def lol_teams(scores, players):
     for l in numbers:
         team_score += int(active_scores[l][1])
     team_score = float(team_score) / 5
-    if average_score - 0 <= team_score <= average_score + 1:
+    #CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
+    if average_score - 1 <= team_score <= average_score + 1:
         team1 = []
         for l in numbers:
             team1.append(players[l])
