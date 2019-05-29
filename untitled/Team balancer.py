@@ -23,7 +23,7 @@ scores = read_patient_sequences('lol_tier.txt')
 #INPUT PLAYERS HERE
 #INPUT PLAYERS HERE
 
-players = ['Lionblaze219','Aimishi','Mapper','Shadow','Exocett','Shamusa','Asdgart','2GoodPhoU','Moon','KV']
+players = ['CoinFlip','Aimishi','Flash','Shadow','Exocett','Chaos','Asdgart','Dark','Lucker','Moon']
 
 
 active_scores = []
@@ -41,22 +41,48 @@ def lol_teams(scores, players):
     average_score = 0
     team_score = 0
 
-    for i in range(len(players)-1):
-        for j in range(len(scores)-1):
+    for i in range(len(players)):
+        for j in range(len(scores)):
             if players[i] == scores[j][0]:
                 active_scores.append((players[i],scores[j][1]))
 
+    print active_scores
+
+
 #finding the average level in the game
-    for k in active_scores:
-        for score in k[1]:
-            total_score += int(score)
-            average_score = float(total_score)/2
+    # for k in active_scores:
+    #     print k
+    #     for score in k[1]:
+    #         print score
+    #         total_score += float(score)
+    #         average_score = float(total_score)/2
+    # print total_score
+
+    # counter = 1
+    # for k in active_scores:
+    #     for score in k[1]:
+    #         if counter == 0:
+    #             total_score += float(score) * 10
+    #             counter = 1
+    #         if counter == 1:
+    #             total_score += float(score)
+    #             counter = 0
+    # print total_score
+
+    k = 0
+    while k < 10 :
+        total_score += int(active_scores[k][1])
+        k += 1
+    average_score = float(total_score) / 2
+    print average_score
+
 
 #generating random unique numbers for teams
     numbers = random.sample(range(0, 9), 5)
     for l in numbers:
         team_score += int(active_scores[l][1])
-    team_score = float(team_score) / 5
+    #team_score = float(team_score) / 5
+    print team_score, 'team score'
     # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
     # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
     # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
@@ -66,14 +92,18 @@ def lol_teams(scores, players):
     # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
     # CHANGE THESE VALUES TO CHANGE THE BALANCE STRICTNESS
 
-    if average_score - 1 <= team_score <= average_score + 1:
+    if average_score - 3 <= team_score <= average_score + 3:
         team1 = []
         for l in numbers:
             team1.append(players[l])
         print 'Blue team : ', team1
+        print team_score
+        print total_score
+        print average_score
+        print total_score - team_score
     else :
         lol_teams(scores,players)
-        #try again if it doesn't fit
+        # try again if it doesn't fit
 
 
 
