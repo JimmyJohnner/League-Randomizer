@@ -23,7 +23,7 @@ scores = read_patient_sequences('lol_tier.txt')
 #INPUT PLAYERS HERE
 #INPUT PLAYERS HERE
 
-players = ['CoinFlip','Aimishi','Flash','Shadow','Exocett','Chaos','Asdgart','Dark','Lucker','Moon']
+players = ['Chaos','Cat','KV','Aimishi','Russ','Moon','Sketch','Shadow','Lucker','Yum29']
 
 
 active_scores = []
